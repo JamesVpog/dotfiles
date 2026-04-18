@@ -1,0 +1,9 @@
+[user]
+	name = James Vongphasouk
+	email = james.vongpha@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
