@@ -20,26 +20,6 @@ config.enable_tab_bar = false
 
 local dimmer = { brightness = 0.15 }
 
-local ekko_bg = wezterm.home_dir .. "/ekko2.png"
-
-config.background = {
-	  {
-	    source = {
-	      File = ekko_bg,
-	    },
-	    hsb = dimmer,
-	    height="Cover",
-	    width="Cover",
-	    repeat_x="NoRepeat",
-	    -- vertical_offset="10%",
-	    -- horizontal_offset="10%",
-	  }
-}
-
-
-
-
-
 config.keys = {
   -- CTRL-SHIFT-l activates the debug overlay
   { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
