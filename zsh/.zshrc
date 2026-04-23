@@ -11,3 +11,6 @@ alias lzg="lazygit"
 # Prompt (or install starship)
 eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
