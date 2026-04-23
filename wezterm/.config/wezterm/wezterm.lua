@@ -4,7 +4,13 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- This is where you actually apply your config choices.
+-- https://wezterm.org/config/lua/wezterm/target_triple.html
+-- run this script 
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  -- if windows
+    config.default_prog = { 'C:\\Windows\\System32\\wsl.exe', '--distribution', 'Ubuntu', '--cd', '~' }
+    config.default_domain = 'WSL:Ubuntu'
+end
 
 -- For example, changing the initial geometry for new windows:
 config.initial_cols = 120
@@ -18,8 +24,6 @@ config.color_scheme = 'catppuccin-macchiato'
 
 config.enable_tab_bar = false
 
-local dimmer = { brightness = 0.15 }
-
 config.keys = {
   -- CTRL-SHIFT-l activates the debug overlay
   { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
@@ -27,3 +31,7 @@ config.keys = {
 
 -- Finally, return the configuration to wezterm:
 return config
+
+
+
+
