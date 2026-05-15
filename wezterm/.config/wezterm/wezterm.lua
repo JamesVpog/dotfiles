@@ -30,6 +30,7 @@ config.default_cursor_style = 'SteadyBlock'
 
 config.enable_tab_bar = false
 
+
 config.keys = {
   -- CTRL-SHIFT-l activates the debug overlay
   { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
