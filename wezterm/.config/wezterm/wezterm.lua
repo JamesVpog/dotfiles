@@ -19,8 +19,14 @@ config.initial_rows = 28
 -- or, changing the font size and color scheme.
 config.font_size = 16
 config.font = wezterm.font('JetBrains Mono' )
-config.color_scheme = 'catppuccin-macchiato'
+config.color_scheme = 'catppuccin-mocha'
 
+  -- Overrides the text color when the current cell is occupied by the cursor
+  --
+config.colors = {
+  cursor_fg = 'black'
+  }
+config.default_cursor_style = 'SteadyBlock'
 
 config.enable_tab_bar = false
 
