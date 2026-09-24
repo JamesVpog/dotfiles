@@ -20,11 +20,32 @@ path=(
 	"$GOPATH/bin"
 	$path
 )
-export PATH
 
+# ocaml stuff
+[[ ! -r '/Users/jamesvongphasouk/.opam/opam-init/init.zsh' ]] || source '/Users/jamesvongphasouk/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+
+export PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jamesvongphasouk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jamesvongphasouk/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jamesvongphasouk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jamesvongphasouk/google-cloud-sdk/completion.zsh.inc'; fi
+
+. "$HOME/.local/bin/env"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/jamesvongphasouk/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/jamesvongphasouk/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/jamesvongphasouk/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/jamesvongphasouk/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

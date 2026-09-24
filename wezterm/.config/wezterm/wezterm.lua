@@ -28,7 +28,7 @@ config.colors = {
   }
 config.default_cursor_style = 'SteadyBlock'
 
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 
 
 config.keys = {
