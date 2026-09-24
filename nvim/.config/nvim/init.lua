@@ -128,7 +128,16 @@ vim.lsp.config("lua_ls", {
 -- lua
 vim.lsp.enable("lua_ls")
 
+-- markdowns
+vim.lsp.enable("yamlls")
 
+
+vim.lsp.config('taplo', {
+  cmd = { 'taplo', 'lsp', 'stdio' },
+  filetypes = { 'toml' },
+  root_markers = { '.git' },
+})
+vim.lsp.enable('taplo')
 
 -- copied sua's tmux for now..
 require('nvim-tmux-navigation').setup {
